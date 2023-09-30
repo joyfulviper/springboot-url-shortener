@@ -1,5 +1,5 @@
 # springboot-url-shortener
-http://3.34.110.128
+https://joyfulviper.net
 
 ## 특징
 - Ramdom 방식 지원
