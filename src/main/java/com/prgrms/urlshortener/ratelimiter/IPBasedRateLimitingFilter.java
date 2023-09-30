@@ -28,6 +28,7 @@ public class IPBasedRateLimitingFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String ip = IpGenerator.getClientIP(request);
+        System.out.println("=================ip주소: "+ip);
         Bucket bucket = getBucketForIp(ip);
 
         if (bucket.tryConsume(1)) {
